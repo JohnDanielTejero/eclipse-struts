@@ -1,0 +1,914 @@
+/************************************************************************
+**********************Global Setting*************************************
+*************************************************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/**********************************************************************
+*************************header set************************************
+***********************************************************************/
+
+.navigation-bar {
+    padding: 0rem 2rem;
+    display: grid;
+    grid-template-columns: auto 40%;
+    justify-content: space-between;
+    background-color: #e7f2ed;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.navigation .nav-item {
+    position: relative;
+    top: 1rem;
+    display: inline;
+    font-size: 1.5rem;
+    margin: 3rem 1rem;
+}
+
+.nav-item .nav-link {
+    color: #198754;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.brand {
+    width: auto;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 25%;
+}
+
+.brand-title {
+    margin-left: 1rem;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(30, 161, 13);
+}
+
+@media (min-width: 768px) {
+    .brand-logo {
+        width: 10%;
+    }
+}
+
+
+/************************************************************************
+*****************************************Footer**************************
+*************************************************************************/
+
+.footer {
+    width: 100%;
+    background-color: #085531;
+}
+
+.footer-content {
+    display: grid;
+    padding: 3rem;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+}
+
+.footer-title {
+    font-size: 3rem;
+}
+
+.footer-description {
+    font-size: 1.33rem;
+}
+
+.footer-description+.copyright {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    font-size: 1.5rem;
+    text-align: end;
+}
+
+
+/************************************************************************
+**************************ScrollBar**************************************
+*************************************************************************/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(11, 78, 2);
+    visibility: collapse;
+    border-radius: 10px;
+    transition: 500ms;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #04ff42;
+    visibility: visible;
+    transition: 500ms;
+}
+
+
+/*media queries*/
+
+
+/******************************************************************************************************
+*                                Custom switch button
+******************************************************************************************************/
+
+.btn-main {
+	outline:none;
+    color: black;
+    background-color: rgb(102, 255, 102);
+    border-color: rgb(102, 255, 102);
+}
+
+.btn-main:hover {
+	outline:none;
+    color: black;
+    background-color: rgb(153, 255, 153);
+    border-color: rgb(153, 255, 153);
+}
+
+.btn-main:focus {
+	outline:none;
+    background-color: rgb(153, 255, 153);
+    border-color: rgb(153, 255, 153);
+    box-shadow: 0 0 1rem 0.444rem #04ff4339;
+}
+
+.custom-switch-container {
+    display: inline-block !important;
+}
+
+
+/* Switch sizes xsm/sm/normal/lg/xlg */
+
+.custom-switch-container .custom-switch-control-xsm {
+    width: 3rem!important;
+    height: 1.5rem!important;
+    border-radius: 50rem !important;
+}
+
+.custom-switch-container .custom-switch-control-sm {
+    width: 5rem!important;
+    height: 2.5rem!important;
+    border-radius: 50rem !important;
+}
+
+.custom-switch-container .custom-switch-control {
+    width: 6rem!important;
+    height: 3rem!important;
+    border-radius: 50rem !important;
+}
+
+.custom-switch-container .custom-switch-control-lg {
+    width: 10rem!important;
+    height: 5rem!important;
+    border-radius: 50rem !important;
+}
+
+.custom-switch-container .custom-switch-control-xlg {
+    width: 20rem;
+    height: 10rem;
+    border-radius: 50rem !important;
+}
+
+
+/*Custom switch checkbox UI*/
+
+.custom-switch {
+    border: solid 1px rgba(0, 0, 0, 0.349);
+    border-radius: 50rem !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem rgba(0, 0, 0, 0.281);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    appearance: none;
+    vertical-align: top;
+    background-size: contain;
+    background-color: rgb(255, 255, 255);
+    transition: all 500ms;
+}
+
+.custom-switch:checked {
+    background-color: rgb(0, 0, 0);
+    transition: all 500ms;
+}
+
+
+/*Custom switch indicator on/off */
+
+.custom-switch::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 50%;
+    transition: all ease-in 500ms;
+}
+
+.custom-switch:checked::after {
+    background-color: rgb(255, 255, 255);
+    left: 50%;
+    transition: all ease-out 500ms;
+}
+
+.custom-switch::before {
+    content: "";
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem !important;
+    line-height: 2.9rem !important;
+    font-family: bootstrap-icons!important;
+    border-radius: 50%;
+    z-index: 1;
+    color: white;
+    width: 50%;
+    height: 100%;
+    transition: all ease-in 500ms;
+}
+
+.custom-switch:checked::before {
+    content: "";
+    color: black;
+    left: 50%;
+    transition: all ease-out 500ms;
+}
+
+
+/*symbol sizes*/
+
+.custom-switch-control-xsm .custom-switch::before {
+    font-size: 0.5rem !important;
+    line-height: 1.4rem !important;
+}
+
+.custom-switch-control-sm .custom-switch::before {
+    font-size: 1rem !important;
+    line-height: 2.4rem !important;
+}
+
+.custom-switch-control-lg .custom-switch::before {
+    font-size: 3rem !important;
+    line-height: 4.9rem !important;
+}
+
+.custom-switch-control-xlg .custom-switch::before {
+    font-size: 5rem !important;
+    line-height: 9.7rem !important;
+}
+
+
+/**************************************************************************
+*                           custom switch themes
+**************************************************************************/
+
+
+/*Switch primary*/
+
+.switch-primary.custom-switch {
+    border-color: #0d6efd !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #0d6efd !important;
+    background-color: #ffffff !important;
+}
+
+.switch-primary.custom-switch::before {
+    color: #ffffff !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-primary.custom-switch::after {
+    background-color: #0d6efd !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-primary.custom-switch:checked {
+    background-color: #0d6efd !important;
+}
+
+.switch-primary.custom-switch:checked::before {
+    color: #0d6efd !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-primary.custom-switch:checked::after {
+    background-color: #ffffff !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*Secondary*/
+
+.switch-secondary.custom-switch {
+    border-color: #6c757d !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #6c757d !important;
+    background-color: #ffffff !important;
+}
+
+.switch-secondary.custom-switch::before {
+    color: #ffffff !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-secondary.custom-switch::after {
+    background-color: #6c757d !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-secondary.custom-switch:checked {
+    background-color: #6c757d !important;
+}
+
+.switch-secondary.custom-switch:checked::before {
+    color: #6c757d !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-secondary.custom-switch:checked::after {
+    background-color: #ffffff !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*Success*/
+
+.switch-success.custom-switch {
+    border-color: #198754 !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #198754 !important;
+    background-color: #ffffff !important;
+}
+
+.switch-success.custom-switch::before {
+    color: #ffffff !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-success.custom-switch::after {
+    background-color: #198754 !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-success.custom-switch:checked {
+    background-color: #198754 !important;
+}
+
+.switch-success.custom-switch:checked::before {
+    color: #198754 !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-success.custom-switch:checked::after {
+    background-color: #ffffff !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*Danger*/
+
+.switch-danger.custom-switch {
+    border-color: #dc3545 !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #dc3545 !important;
+    background-color: #ffffff !important;
+}
+
+.switch-danger.custom-switch::before {
+    color: #ffffff !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-danger.custom-switch::after {
+    background-color: #dc3545 !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-danger.custom-switch:checked {
+    background-color: #dc3545 !important;
+}
+
+.switch-danger.custom-switch:checked::before {
+    color: #dc3545 !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-danger.custom-switch:checked::after {
+    background-color: #ffffff !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*Warning*/
+
+.switch-warning.custom-switch {
+    border-color: #ffc107 !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #ffc107 !important;
+    background-color: #ffffff !important;
+}
+
+.switch-warning.custom-switch::before {
+    color: #ffffff !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-warning.custom-switch::after {
+    background-color: #ffc107 !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-warning.custom-switch:checked {
+    background-color: #ffc107 !important;
+}
+
+.switch-warning.custom-switch:checked::before {
+    color: #ffc107 !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-warning.custom-switch:checked::after {
+    background-color: #ffffff !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*Info*/
+
+.switch-info.custom-switch {
+    border-color: #0dcaf0 !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #0dcaf0 !important;
+    background-color: #ffffff !important;
+}
+
+.switch-info.custom-switch::before {
+    color: #ffffff !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-info.custom-switch::after {
+    background-color: #0dcaf0 !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-info.custom-switch:checked {
+    background-color: #0dcaf0 !important;
+}
+
+.switch-info.custom-switch:checked::before {
+    color: #0dcaf0 !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-info.custom-switch:checked::after {
+    background-color: #ffffff !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*Light*/
+
+.switch-light.custom-switch {
+    border-color: #b1b1b1 !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #f8f9fa !important;
+    background-color: black !important;
+}
+
+.switch-light.custom-switch::before {
+    color: black !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-light.custom-switch::after {
+    background-color: #f8f9fa !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-light.custom-switch:checked {
+    background-color: #f8f9fa !important;
+}
+
+.switch-light.custom-switch:checked::before {
+    color: #f8f9fa !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-light.custom-switch:checked::after {
+    background-color: black !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*dark*/
+
+.switch-dark.custom-switch {
+    border-color: #212529 !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #212529 !important;
+    background-color: #f8f9fa !important;
+}
+
+.switch-dark.custom-switch::before {
+    color: #f8f9fa !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-dark.custom-switch::after {
+    background-color: #212529 !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-dark.custom-switch:checked {
+    background-color: #212529 !important;
+}
+
+.switch-dark.custom-switch:checked::before {
+    color: #212529 !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-dark.custom-switch:checked::after {
+    background-color: #f8f9fa !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*muted*/
+
+.switch-muted.custom-switch {
+    border-color: #b1b1b1 !important;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.1rem #6c757d !important;
+    background-color: #212529 !important;
+}
+
+.switch-muted.custom-switch::before {
+    color: #212529 !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-muted.custom-switch::after {
+    background-color: #6c757d !important;
+    transition: all ease-in 500ms;
+}
+
+.switch-muted.custom-switch:checked {
+    background-color: #6c757d !important;
+}
+
+.switch-muted.custom-switch:checked::before {
+    color: #6c757d !important;
+    transition: all ease-out 500ms;
+}
+
+.switch-muted.custom-switch:checked::after {
+    background-color: #212529 !important;
+    transition: all ease-out 500ms;
+}
+
+
+/*********************************************************
+        dark and light mode switch
+*********************************************************/
+
+.mode-switch.custom-switch::before {
+    content: "\F1D1";
+    transition: all ease-in 500ms;
+}
+
+.mode-switch.custom-switch:checked::before {
+    content: "\F494";
+    transition: all ease-out 500ms;
+}
+
+
+/**********************************************************
+************************Index Main Content*****************
+***********************************************************/
+
+.index-main {
+    position: relative;
+    width: 100%;
+}
+
+.color-fade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+}
+
+.img-overlay img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-content {
+    padding: 3rem;
+    padding-top: 5rem;
+}
+
+.text-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #085531;
+}
+
+.text-description {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.description-message {
+    font-size: 2rem;
+    text-align: center;
+    color: #0a4b2e;
+}
+
+.pos-center {
+    display: block;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.button-green {
+    font-size: 2rem;
+    padding: 1.8rem;
+    text-decoration: none;
+    color: white;
+    background-color: #0d6c25;
+    border: #0d6c25 1px solid;
+    border-radius: 25rem;
+}
+
+
+/***************************************************
+****************Registration************************
+****************************************************/
+
+.registration-main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.registration-img-overlay {
+    position: relative;
+}
+
+.registration-img-overlay img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.registration-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.registration-title {
+    font-size: 3.5rem;
+    color: #072f11;
+}
+
+.registration-message {
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: #072f11;
+    font-weight: lighter;
+}
+
+.registration-form {
+    padding: 5rem;
+}
+
+.form {
+    border-radius: 1rem;
+    padding: 2rem;
+    border: rgb(154, 154, 154) 1px solid;
+    box-shadow: 1rem 1rem 0.5rem 0.011rem rgb(154, 154, 154);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.form-floating {
+    position: relative;
+    padding: 1rem;
+}
+
+.form-control {
+    width: 95%;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    border-radius: 0.222rem;
+    border: 1px rgb(164, 164, 164) solid;
+    transition: all 0.5s;
+}
+
+.form-control:focus {
+    outline: #34c7e4;
+    border: #34c7e4 1px solid;
+    box-shadow: #0dcaf02c 0 0 0rem 0.3rem;
+    transition: all 0.5s;
+}
+
+.form-control.is-invalid {
+    outline: none;
+    border-color: #dc3545 !important;
+}
+
+.form-control.is-invalid:focus {
+    outline: #dc3545 !important;
+    border: #dc3545 !important;
+    box-shadow: #fb415459 0 0 0rem 0.3rem;
+    transition: all 0.5s;
+}
+
+.form-floating>label {
+    position: absolute;
+    color: rgb(165, 165, 165);
+    font-size: 0.88rem;
+    top: 20%;
+    left: 3%;
+    z-index: 0;
+}
+
+.invalid-feedback {
+    margin-top: 0.55rem;
+    display: none;
+    color: #dc3545;
+    transition: all 0.5ms;
+}
+
+.form-control.is-invalid~.invalid-feedback {
+    display: block !important;
+    transition: all 0.5ms;
+}
+
+.form-check-input {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: 0.25em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, .25);
+    appearance: none;
+    color-adjust: exact;
+}
+
+.form-check-input:focus {
+    outline: #34c7e4;
+    border: #34c7e4 1px solid;
+    box-shadow: #0dcaf02c 0 0 0rem 0.3rem;
+}
+
+.form-check-input[type=checkbox] {
+    outline: rgba(138, 138, 138, 0.281);
+    border-radius: 0.25rem !important;
+    border-color: rgba(138, 138, 138, 0.281);
+}
+
+.form-check-input:checked[type=checkbox] {
+    background-color: #0d6efd;
+    z-index: -1;
+}
+
+.form-check-input::after {
+    position: absolute;
+    left: 3%;
+    width: 100%;
+    height: 100%;
+    content: "\2713";
+    color: white;
+    z-index: 1;
+}
+
+.form-check-input+label {
+    line-height: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.check-error {
+    display: block;
+    color: #dc3545;
+    margin: 0.3rem 0rem;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.button-submit {
+    margin-top: 0.22rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.222rem;
+    font-size: 1rem;
+}
+
+
+/*******************************************************
+******************Registration Thank You****************
+********************************************************/
+
+.container {
+    padding: 10rem;
+}
+
+.thankyou-card {
+    position: relative;
+    padding: 2rem 5rem;
+    border: rgba(126, 126, 126, 0.442) 1px solid;
+    box-shadow: 1rem 1rem 0.5rem 0.222rem rgb(205, 205, 205);
+    border-radius: 0.222rem;
+}
+
+.card-header {
+    margin: 0 0 3rem 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #085531;
+}
+
+.card-message>p {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: #021e11;
+}
+
+.card-author>p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #021e11;
+}
+
+.thankyou-login-button {
+    position: relative;
+    margin-top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50rem;
+}
